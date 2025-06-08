@@ -13,6 +13,18 @@
         h1 {
             color: #4CAF50;
             text-align: center;
+            animation: slideIn 1s ease forwards;
+            opacity: 0;
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
         }
         section {
             background: white;
@@ -45,16 +57,53 @@
             margin-top: 15px;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
+        /* Sekcja właścicieli */
+        .team-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            text-align: center;
+            max-width: 180px;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Firma DUDLE 🍌🥭</h1>
+    <h1>Firma DUDLE </h1>
 
     <section>
         <h2>🏢 FIRMA DUDLE</h2>
         <p>Właściciel: Dominik Łyp<br />
         Wicewłaściciel: Babcia Łyp<br />
         Siedziba: Jastkowice, Polska</p>
+    </section>
+
+    <section>
+        <h2>👥 Właściciele i Pracownicy</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="dominik.jpg" alt="Dominik Łyp" />
+                <p><strong>Dominik Łyp</strong><br />Właściciel</p>
+            </div>
+            <div class="team-member">
+                <img src="babcia.jpg" alt="Babcia Łyp" />
+                <p><strong>Babcia Łyp</strong><br />Wicewłaściciel</p>
+            </div>
+            <div class="team-member">
+                <img src="hipopotam.jpg" alt="Karolina McDonald" />
+                <p><strong>Karolina</strong><br />Pracownik Nr 1</p>
+            </div>
+        </div>
     </section>
 
     <section>
@@ -66,10 +115,10 @@
         <h2>🗺️ Strefy upraw:</h2>
         <p class="green">🟢 Zielona Strefa – ZIOŁA<br />
         → Plantacja bananów – rozciągająca się pośród lekkiego tropikalnego mikroklimatu. Banany rosną jak dzikie, a ich strażnikiem jest złoty bananowy posąg.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Banana_plantation_in_Philippines.jpg" alt="Plantacja bananów" />
+        <img src="banany.jpg" alt="Plantacja bananów" width="260" height="180" />
         <p class="orange">🟠 Pomarańczowa Strefa – OWOCOWA EKSPANSJA<br />
         → Plantacja mango – dojrzałe, soczyste owoce rosną tu pod opieką Babci Łyp, znanej z tego, że podlewa je herbatą z miętą i klaszcze jak rosną.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Mango_plantation_India.jpg" alt="Plantacja mango" />
+        <img src="mango.jpg" alt="Plantacja mango" width="270" height="210" />
         <p class="red">🔴 Czerwona Strefa – NIEZAGOSPODAROWANA<br />
         → Teren czeka na przyszłe inwestycje (może arbuzowa wieża obserwacyjna albo centrum badawcze doświadczalnych owoców?).</p>
     </section>
